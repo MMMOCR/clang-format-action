@@ -6,7 +6,8 @@ RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf && apt-get update && apt-get in
         git \
         jq \
         wget \
-        xz-utils
+        xz-utils \
+        file
 
 RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf && wget "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.0/clang+llvm-15.0.0-x86_64-apple-darwin.tar.xz" -O clang.tar.xz && \
     tar xf clang.tar.xz && \
