@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
         wget \
         xz-utils
 
-RUN wget "http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz" -O clang.tar.xz && \
+RUN wget "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.0/clang+llvm-15.0.0-x86_64-apple-darwin.tar.xz" -O clang.tar.xz && \
     tar xf clang.tar.xz && \
     cd clang* && \
     cp -R * /usr/local

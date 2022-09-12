@@ -16,8 +16,8 @@ echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
 
 echo "## Configuring git author..."
-git config --global user.email "clang-format@1337z.ninja"
-git config --global user.name "Clang Format"
+git config --global user.email "formabot@interieur.gouv.fr"
+git config --global user.name "FormaBot"
 
 # Ignore workflow files (we may not touch them)
 git update-index --assume-unchanged .github/workflows/*
