@@ -6,6 +6,7 @@ REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
 echo "## Initializing git repo..."
 git init
+git config --global --add safe.directory /github/workspace
 echo "### Adding git remote..."
 git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
 echo "### Getting branch"
