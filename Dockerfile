@@ -9,7 +9,7 @@ RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf && apt-get update && apt-get in
         xz-utils \
         file
 
-RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf && wget "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.0/clang+llvm-15.0.0-x86_64-apple-darwin.tar.xz" -O clang.tar.xz && \
+RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf && wget "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz" -O clang.tar.xz && \
     tar xf clang.tar.xz && \
     cd clang* && \
     cp -R * /usr/local
