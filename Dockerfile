@@ -13,6 +13,8 @@ RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf && wget "https://github.com/llv
     cd clang* && \
     cp -R * /usr/local
 
+RUN git config --global safe.directory '*'
+
 COPY LICENSE README.md /
 
 COPY .clang-format /.clang-format
