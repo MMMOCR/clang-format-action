@@ -4,30 +4,10 @@ BasedOnStyle:  LLVM
 AccessModifierOffset: -2
 AlignAfterOpenBracket: Align
 AlignArrayOfStructures: Left
-AlignConsecutiveMacros:
-  Enabled: true
-#  AcrossEmptyLines: false
-#  AcrossComments: true
-#  AlignCompound: true
-#  PadOperators: true
-AlignConsecutiveAssignments:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
-  AlignCompound: true
-  PadOperators: true
-AlignConsecutiveBitFields:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
-  AlignCompound: true
-  PadOperators: true
-AlignConsecutiveDeclarations:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
-  AlignCompound: true
-  PadOperators: true
+AlignConsecutiveMacros: AcrossComments
+AlignConsecutiveAssignments: AcrossEmptyLines
+AlignConsecutiveBitFields: AcrossComments
+AlignConsecutiveDeclarations: AcrossEmptyLines
 AlignEscapedNewlines: Right
 AlignOperands:   Align
 AlignTrailingComments: true
