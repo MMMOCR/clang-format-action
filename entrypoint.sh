@@ -6,7 +6,7 @@ REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
 echo "## Cleaning surrent working dir"
 
-rm -rf *
+find . -delete
 
 echo "## Initializing git repo..."
 if [ ! -d .git ];
