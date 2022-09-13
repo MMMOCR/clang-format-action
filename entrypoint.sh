@@ -14,9 +14,6 @@ then git init
 fi
 git config --global --add safe.directory /github/workspace
 echo "### Adding git remote..."
-if [ `git remote show` = "origin" ]; 
-then git remote remove origin
-fi
 git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
 echo "### Getting branch"
 BRANCH=${GITHUB_REF#*refs/heads/}
