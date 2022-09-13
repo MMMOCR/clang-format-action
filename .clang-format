@@ -105,7 +105,6 @@ IndentExternBlock: AfterExternBlock
 IndentRequires:  false
 IndentWidth:     4
 IndentWrappedFunctionNames: true
-InsertTrailingCommas: Wrapped
 JavaScriptQuotes: Leave
 JavaScriptWrapImports: true
 KeepEmptyLinesAtTheStartOfBlocks: true
