@@ -5,9 +5,15 @@ set -eu
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
 echo "## Initializing git repo..."
+if [ ! -d .git ];
+then git init
+fi
 git config --global --add safe.directory /github/workspace
 echo "### Adding git remote..."
-git clone https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+if [ `git remote show` = "origin" ]; 
+then git remote remove origin
+fi
+git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
 echo "### Getting branch"
 BRANCH=${GITHUB_REF#*refs/heads/}
 echo "### git fetch $BRANCH ..."
