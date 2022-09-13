@@ -106,7 +106,6 @@ IndentRequires:  false
 IndentWidth:     4
 IndentWrappedFunctionNames: true
 InsertTrailingCommas: Wrapped
-InsertBraces: true
 JavaScriptQuotes: Leave
 JavaScriptWrapImports: true
 KeepEmptyLinesAtTheStartOfBlocks: true
