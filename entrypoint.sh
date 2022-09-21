@@ -17,7 +17,7 @@ echo "### Adding git remote..."
 git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
 echo "### Getting branch"
 echo "${GITHUB_HEAD_REF}/${GITHUB_REF_NAME}"
-if [[ -v GITHUB_HEAD_REF ]];
+if [[ -v GITHUB_HEAD_REF && GITHUB_HEAD_REF -ne "" ]];
 then
 BRANCH=${GITHUB_HEAD_REF}
 else
