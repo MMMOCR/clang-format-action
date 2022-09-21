@@ -16,7 +16,12 @@ git config --global --add safe.directory /github/workspace
 echo "### Adding git remote..."
 git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
 echo "### Getting branch"
+if [[ -v GITHUB_HEAD_REF ]];
+then
 BRANCH=${GITHUB_REF_NAME}
+else
+BRANCH=${GITHUB_HEAD_REF}
+fi
 echo "### git fetch $BRANCH ..."
 git pull origin $BRANCH
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
