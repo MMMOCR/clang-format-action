@@ -42,5 +42,8 @@ clang-format -style=file -i $SRC
 echo "## Commiting files..."
 git commit -a -m "apply clang-format" || true
 
+git branch
+git status
+
 echo "## Pushing to $BRANCH"
 git push -u origin $BRANCH
