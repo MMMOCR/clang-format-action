@@ -24,6 +24,7 @@ BRANCH=${GITHUB_REF_NAME}
 fi
 echo "### git fetch $BRANCH ..."
 git pull origin $BRANCH
+git switch $BRANCH
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
 
