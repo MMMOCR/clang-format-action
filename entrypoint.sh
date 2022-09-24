@@ -53,6 +53,6 @@ git branch
 git status
 
 echo "## Pushing to $BRANCH"
-while [[ ! git push -u origin $BRANCH ]];
+while ! git push -u origin $BRANCH;
 do sleep 2;
 done
