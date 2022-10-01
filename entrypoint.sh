@@ -23,13 +23,17 @@ else
 BRANCH=${GITHUB_REF_NAME}
 fi
 echo "### git fetch $BRANCH ..."
-git fetch
+while ! git fetch;
+do sleep 2;
+done
 
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
 
 echo "### git fetch $BRANCH ..."
-git pull origin $BRANCH
+while ! git pull origin $BRANCH;
+do sleep 2;
+done
 
 git branch
 git branch -a
