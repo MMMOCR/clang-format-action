@@ -26,6 +26,7 @@ BreakStringLiterals: 'true'
 ColumnLimit: '80'
 DerivePointerAlignment: 'true'
 IncludeBlocks: Regroup
+IndentWidth: '4'
 PointerAlignment: Right
 ReflowComments: 'true'
 SortIncludes: 'true'
