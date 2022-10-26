@@ -18,11 +18,7 @@ git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULL
 echo "### Getting branch"
 echo "### ${GITHUB_HEAD_REF}"
 echo "### ${GITHUB_REF_NAME}"
-if [[ -v GITHUB_HEAD_REF ]];
-then
-echo 1
-BRANCH=${GITHUB_HEAD_REF}
-elif  [[ `echo ${GITHUB_HEAD_REF}` -ne "" ]];
+if [[ -v GITHUB_HEAD_REF && `echo ${GITHUB_HEAD_REF}` -ne "" ]];
 then
 echo 2
 BRANCH=${GITHUB_HEAD_REF}
