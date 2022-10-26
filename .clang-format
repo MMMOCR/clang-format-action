@@ -42,6 +42,6 @@ SpacesInCStyleCastParentheses: 'false'
 SpacesInContainerLiterals: 'false'
 SpacesInParentheses: 'false'
 SpacesInSquareBrackets: 'false'
-UseTab: ForIndentation
+UseTab: UT_Never
 
 ...
