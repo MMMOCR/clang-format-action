@@ -20,11 +20,14 @@ echo "### ${GITHUB_HEAD_REF}"
 echo "### ${GITHUB_REF_NAME}"
 if [[ -v GITHUB_HEAD_REF ]];
 then
+echo 1
 BRANCH=${GITHUB_HEAD_REF}
 elif  [[ `echo ${GITHUB_HEAD_REF}` -ne "" ]];
 then
+echo 2
 BRANCH=${GITHUB_HEAD_REF}
 else
+echo 3
 BRANCH=${GITHUB_REF_NAME}
 fi
 echo "### git fetch $BRANCH ..."
